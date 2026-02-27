@@ -30,7 +30,7 @@ export default function ContactTab() {
       >
         <span className="btn-bg bg-ink" />
         <span className="relative z-10 flex items-center gap-2">
-          Book a Discovery Call
+          Let's Connect
           <ArrowRight size={14} />
         </span>
       </a>
