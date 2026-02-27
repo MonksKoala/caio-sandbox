@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Noise overlay — eliminates flat digital gradients */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+}
+
+/* Magnetic button hover */
+.btn-magnetic {
+  @apply relative overflow-hidden transition-transform;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+.btn-magnetic .btn-bg {
+  @apply absolute inset-0 transition-transform duration-500;
+  transform: translateX(-101%);
+}
+.btn-magnetic:hover .btn-bg {
+  transform: translateX(0);
+}
+
+/* Interactive lift */
+.hover-lift {
+  @apply transition-transform;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hover-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #E63B2E;
+  border-radius: 3px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F3EE;
+  color: #111111;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Blinking cursor for typewriter */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+/* Pulsing dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
