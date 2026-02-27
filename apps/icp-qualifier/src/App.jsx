@@ -6,6 +6,7 @@ import LoadingState from './components/LoadingState.jsx'
 import ScoreDisplay from './components/ScoreDisplay.jsx'
 import HistoryPanel from './components/HistoryPanel.jsx'
 import { useScoreHistory } from './hooks/useScoreHistory.js'
+import { scoreProspect } from './lib/score-prospect.js'
 import { exportToCSV } from './lib/csv-export.js'
 
 export default function App() {
@@ -24,18 +25,7 @@ export default function App() {
     setError(null)
 
     try {
-      const res = await fetch('/api/score', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(prospect),
-      })
-
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
-        throw new Error(data.error || `Server error (${res.status})`)
-      }
-
-      const result = await res.json()
+      const result = await scoreProspect(prospect)
       const entry = addScore(prospect, result)
       setCurrentResult(result)
       setActiveHistoryId(entry.id)

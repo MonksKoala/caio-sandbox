@@ -40,8 +40,16 @@ export default function HeroPanel({ onContactClick }) {
       </div>
 
       {/* Identity block */}
-      <div className="hero-identity flex-1 flex flex-col justify-center md:justify-end md:pb-8">
-        <h1 className="hero-name font-drama italic text-3xl md:text-5xl lg:text-6xl text-ink leading-[1.1] mb-2 md:mb-3">
+      <div className="hero-identity flex-1 flex flex-col items-center justify-center md:justify-end md:pb-8">
+        {/* Avatar */}
+        <div className="hero-avatar w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-ink/10 mb-3 md:mb-4">
+          <img
+            src={`${import.meta.env.BASE_URL}avatar.jpg`}
+            alt="Gabriel Lacsam"
+            className="w-full h-full object-cover object-[center_50%] scale-125"
+          />
+        </div>
+        <h1 className="hero-name font-drama italic text-3xl md:text-5xl lg:text-6xl text-ink leading-[1.1] mb-2 md:mb-3 text-center">
           {HERO.name}
         </h1>
         <p className="hero-title font-mono text-[11px] md:text-xs uppercase tracking-[0.15em] text-signal mb-2 md:mb-4">

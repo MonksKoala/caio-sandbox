@@ -93,7 +93,7 @@ function Hero({ onApply }) {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('/images/runners.jpg')`,
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/runners.jpg)`,
         }}
       />
       {/* Heavy dark gradient overlay */}
