@@ -1,8 +1,7 @@
-import { Briefcase, Cpu, Send } from 'lucide-react'
+import { Send, FileText } from 'lucide-react'
 
 const TABS = [
-  { id: 'work', label: 'Work', icon: Briefcase },
-  { id: 'skills', label: 'Skills', icon: Cpu },
+  { id: 'cv', label: 'CV', icon: FileText },
   { id: 'contact', label: 'Contact', icon: Send },
 ]
 

@@ -1,12 +1,10 @@
 import { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
-import WorkTab from './tabs/WorkTab.jsx'
-import SkillsTab from './tabs/SkillsTab.jsx'
+import CvTab from './tabs/CvTab.jsx'
 import ContactTab from './tabs/ContactTab.jsx'
 
 const TAB_COMPONENTS = {
-  work: WorkTab,
-  skills: SkillsTab,
+  cv: CvTab,
   contact: ContactTab,
 }
 
@@ -60,7 +58,7 @@ export default function ContentZone({ activeTab }) {
       )
 
       // Stagger children entrance
-      const cards = incoming.querySelectorAll('.project-card, .skill-pill, .contact-link')
+      const cards = incoming.querySelectorAll('.cv-item, .contact-link')
       if (cards.length > 0) {
         gsap.fromTo(
           cards,

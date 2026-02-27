@@ -42,3 +42,17 @@ export const CONTACT = {
   github: 'https://github.com/MonksKoala/caio-sandbox',
   cal: 'https://cal.com/monks-f1cc9n/30min',
 }
+
+export const EXPERIENCE = [
+  {
+    id: 'account-manager',
+    role: 'Account Manager',
+    domain: 'B2B Communication, Mobility & Cloud Solutions',
+    duration: '8 years',
+    highlights: [
+      'Managed enterprise B2B accounts across communication, mobility, and cloud solution verticals',
+      'Drove revenue growth through strategic relationship building and consultative selling',
+      'Bridged technical and business stakeholders to deliver complex solution deployments',
+    ],
+  },
+]

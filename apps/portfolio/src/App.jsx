@@ -28,7 +28,7 @@ class ErrorBoundary extends Component {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('work')
+  const [activeTab, setActiveTab] = useState('cv')
 
   return (
     <ErrorBoundary>
